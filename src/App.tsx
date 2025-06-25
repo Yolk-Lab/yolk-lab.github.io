@@ -139,7 +139,7 @@ export default function App() {
                 <Egg className="h-6 w-6 text-yolk-darker" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl tracking-tight">Yolk AI Hub</span>
+                <span className="text-xl tracking-tight">Yolk AI Lab</span>
                 <span className="text-xs text-yolk-teal uppercase tracking-wider">Grown, Not Born</span>
               </div>
             </div>
@@ -229,7 +229,7 @@ export default function App() {
                 Grown, Not Born
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
-                We believe great entrepreneurs aren't just born with it—they're cultivated through the right environment, community, and relentless growth. At Yolk AI Hub, we provide the incubator for your startup dreams.
+                We believe great entrepreneurs aren't just born with it—they're cultivated through the right environment, community, and relentless growth. At Yolk AI Lab, we provide the incubator for your startup dreams.
               </p>
               <div className="pt-4">
                 <a 
@@ -481,12 +481,12 @@ export default function App() {
                 <Egg className="h-6 w-6 text-yolk-darker" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl tracking-tight">Yolk AI Hub</span>
+                <span className="text-xl tracking-tight">Yolk AI Lab</span>
                 <span className="text-xs text-yolk-yellow uppercase tracking-wider">Grown, Not Born</span>
               </div>
             </div>
             <div className="text-gray-400 text-center md:text-right">
-              <div>© 2025 Yolk AI Growth Hub. All rights reserved.</div>
+              <div>© 2025 Yolk AI Lab. All rights reserved.</div>
               <div className="mt-1">
                 <a 
                   href="https://yolkfolk.pl" 
