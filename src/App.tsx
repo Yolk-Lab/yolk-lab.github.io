@@ -393,13 +393,13 @@ export default function App() {
             <div className="space-y-4">
               <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
                 <ImageWithFallback
-                  src="./images/yolk-workspace/community-networking.webp"
-                  alt="Community networking and connections at Yolk coworking space"
+                  src="./images/yolk-workspace/film-night-community.webp"
+                  alt="Community events and social gatherings at Yolk coworking space"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-lg font-semibold">Community Networking</h3>
-              <p className="text-gray-600 text-sm md:text-base">Build meaningful connections with fellow entrepreneurs and industry professionals in our vibrant community.</p>
+              <h3 className="text-lg font-semibold">Community Events</h3>
+              <p className="text-gray-600 text-sm md:text-base">Join regular social events, workshops, and networking sessions that bring our startup community together.</p>
             </div>
           </div>
         </div>
