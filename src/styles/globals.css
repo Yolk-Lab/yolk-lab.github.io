@@ -16,7 +16,39 @@
 
 @layer base {
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #54595f;
+  }
+  
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 400;
+  }
+  
+  p, li {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #54595f;
+  }
+  
+  /* Navigation styling to match Yolk */
+  nav a, .navbar-nav a {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+  }
+  
+  /* Button styling to match Yolk */
+  button, .btn {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-weight: 400;
   }
 }
 
