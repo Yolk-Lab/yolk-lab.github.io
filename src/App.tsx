@@ -124,8 +124,8 @@ function ImageWithFallback({
   return <img src={src} alt={alt} className={className} {...props} />;
 }
 
-// Placeholder for T-shirt image
-const yolkTshirt = "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80";
+// Community event image showing the "Grown, Not Born" culture
+const yolkCommunityImage = "/images/yolk-workspace/community-event-1.jpg";
 
 export default function App() {
   return (
@@ -197,8 +197,8 @@ export default function App() {
               <div className="absolute -inset-4 bg-gradient-to-r from-yolk-yellow to-yolk-teal rounded-3xl blur opacity-20"></div>
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-yolk-yellow-light to-yolk-teal-light shadow-2xl">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                  alt="Modern coworking space with collaborative areas"
+                  src="/images/yolk-workspace/cafe-style-coworking.webp"
+                  alt="Yolk coworking space with collaborative cafe-style areas"
                   className="w-full h-full object-cover mix-blend-multiply"
                 />
               </div>
@@ -239,9 +239,9 @@ export default function App() {
             <div className="flex justify-center lg:justify-end">
               <div className="w-80 h-80 relative">
                 <img 
-                  src={yolkTshirt} 
-                  alt="Grown Not Born T-shirt with Yolk branding"
-                  className="w-full h-full object-contain drop-shadow-2xl"
+                  src={yolkCommunityImage} 
+                  alt="Yolk community events where entrepreneurs are grown, not born"
+                  className="w-full h-full object-cover rounded-2xl drop-shadow-2xl"
                 />
               </div>
             </div>
@@ -315,6 +315,92 @@ export default function App() {
                 </CardDescription>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Workspace Gallery */}
+      <section className="py-20 bg-gradient-to-br from-yolk-yellow-light/30 to-yolk-teal-light/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl mb-6 tracking-tight">Your Creative Workspace</h2>
+            <p className="text-xl text-gray-600 leading-relaxed">
+              Experience the energy and collaboration at Yolk Coworking - where AI startups are grown, not born
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="space-y-4">
+              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
+                <ImageWithFallback
+                  src="/images/yolk-workspace/dedicated-desks.webp"
+                  alt="Dedicated desk workspace for focused development"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-lg font-semibold">Dedicated Development Desks</h3>
+              <p className="text-gray-600">Focus on building your AI startup with dedicated workspace and all the tools you need.</p>
+            </div>
+
+            <div className="space-y-4">
+              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
+                <ImageWithFallback
+                  src="/images/yolk-workspace/collaborative-workspace.webp"
+                  alt="Collaborative networking and community events"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-lg font-semibold">Vibrant Community</h3>
+              <p className="text-gray-600">Connect with fellow entrepreneurs, investors, and mentors in our collaborative spaces.</p>
+            </div>
+
+            <div className="space-y-4">
+              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
+                <ImageWithFallback
+                  src="/images/yolk-workspace/meeting-room.webp"
+                  alt="Professional meeting rooms for pitches and collaboration"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-lg font-semibold">Professional Meeting Spaces</h3>
+              <p className="text-gray-600">Present your ideas in professional meeting rooms equipped with latest technology.</p>
+            </div>
+
+            <div className="space-y-4">
+              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
+                <ImageWithFallback
+                  src="/images/yolk-workspace/flexible-cafe-coworking.webp"
+                  alt="Flexible cafe-style workspace for casual collaboration"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-lg font-semibold">Flexible Collaboration</h3>
+              <p className="text-gray-600">Work in our cafe-style spaces perfect for brainstorming and casual meetings.</p>
+            </div>
+
+            <div className="space-y-4">
+              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
+                <ImageWithFallback
+                  src="/images/yolk-workspace/courtyard-events.webp"
+                  alt="Outdoor courtyard events and networking"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-lg font-semibold">Outdoor Networking</h3>
+              <p className="text-gray-600">Join outdoor events and networking sessions in our beautiful courtyard space.</p>
+            </div>
+
+            <div className="space-y-4">
+              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
+                <ImageWithFallback
+                  src="/images/yolk-workspace/yolk-cafe.webp"
+                  alt="Yolk cafe for informal meetings and coffee breaks"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="text-lg font-semibold">On-site Cafe</h3>
+              <p className="text-gray-600">Fuel your creativity with artisan coffee and connect with other founders in our cafe.</p>
+            </div>
           </div>
         </div>
       </section>
