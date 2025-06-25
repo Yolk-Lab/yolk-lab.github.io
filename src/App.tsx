@@ -195,7 +195,7 @@ export default function App() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="h-4 w-4 text-yolk-darker flex-shrink-0" />
-                  <span className="whitespace-nowrap">Yolk Coworking</span>
+                  <span className="whitespace-nowrap">Yolk Coworking, Kraków</span>
                 </div>
               </div>
             </div>
@@ -238,7 +238,7 @@ export default function App() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-yolk-yellow hover:text-yolk-yellow-light transition-colors"
                 >
-                  <span className="mr-2">Hosted at Yolk Coworking</span>
+                  <span className="mr-2">Hosted at Yolk Coworking, Kraków</span>
                   <ExternalLink className="h-4 w-4" />
                 </a>
               </div>
@@ -332,7 +332,7 @@ export default function App() {
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 tracking-tight leading-tight">Your Creative Workspace</h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
-              Experience the energy and collaboration at Yolk Coworking - where AI startups are grown, not born
+              Experience the energy and collaboration at Yolk Coworking in Kraków - where AI startups are grown, not born
             </p>
           </div>
 
