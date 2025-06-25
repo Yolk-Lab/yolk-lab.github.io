@@ -125,7 +125,7 @@ function ImageWithFallback({
 }
 
 // Community event image showing the "Grown, Not Born" culture
-const yolkCommunityImage = "/images/yolk-workspace/community-event-1.jpg";
+const yolkCommunityImage = "./images/yolk-workspace/community-event-1.jpg";
 
 export default function App() {
   return (
@@ -151,21 +151,21 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-yolk-yellow-light via-white to-yolk-teal-light/20 py-20 lg:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-yolk-yellow-light via-white to-yolk-teal-light/20 py-12 md:py-20 lg:py-32">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(246,213,92,0.3),transparent_50%)] pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
                 <Badge variant="secondary" className="w-fit">
                   Invitation Only • Starting July 2025
                 </Badge>
                 <div className="space-y-4">
-                  <h1 className="text-5xl lg:text-7xl tracking-tight">
+                  <h1 className="text-3xl md:text-5xl lg:text-7xl tracking-tight">
                     AI Startups
                     <span className="text-yolk-teal block">Grown, Not Born</span>
                   </h1>
-                  <p className="text-xl text-yolk-dark max-w-lg leading-relaxed">
+                  <p className="text-lg md:text-xl text-yolk-dark max-w-lg leading-relaxed">
                     Join an exclusive community of AI startup founders in a premium workspace designed for collaboration, creativity, and rapid growth.
                   </p>
                 </div>
@@ -177,7 +177,7 @@ export default function App() {
                 </Button>
               </div>
 
-              <div className="flex items-center space-x-8 text-sm text-yolk-dark">
+              <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-yolk-dark">
                 <div className="flex items-center space-x-2">
                   <Users className="h-4 w-4 text-yolk-darker" />
                   <span>15 Selected Founders</span>
@@ -197,7 +197,7 @@ export default function App() {
               <div className="absolute -inset-4 bg-gradient-to-r from-yolk-yellow to-yolk-teal rounded-3xl blur opacity-20"></div>
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-yolk-yellow-light to-yolk-teal-light shadow-2xl">
                 <ImageWithFallback
-                  src="/images/yolk-workspace/cafe-style-coworking.webp"
+                  src="./images/yolk-workspace/cafe-style-coworking.webp"
                   alt="Yolk coworking space with collaborative cafe-style areas"
                   className="w-full h-full object-cover mix-blend-multiply"
                 />
@@ -213,15 +213,15 @@ export default function App() {
         </div>
       </section>
 
-      {/* Tagline Section with T-shirt */}
-      <section className="py-16 bg-yolk-darker text-white">
+      {/* Tagline Section with Community Image */}
+      <section className="py-12 md:py-16 bg-yolk-darker text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-4xl lg:text-5xl tracking-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl tracking-tight">
                 Grown, Not Born
               </h2>
-              <p className="text-xl text-gray-300 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
                 We believe great entrepreneurs aren't just born with it—they're cultivated through the right environment, community, and relentless growth. At Yolk AI Hub, we provide the incubator for your startup dreams.
               </p>
               <div className="pt-4">
@@ -237,7 +237,7 @@ export default function App() {
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <div className="w-80 h-80 relative">
+              <div className="w-64 h-64 md:w-80 md:h-80 relative">
                 <img 
                   src={yolkCommunityImage} 
                   alt="Yolk community events where entrepreneurs are grown, not born"
@@ -250,16 +250,16 @@ export default function App() {
       </section>
 
       {/* Key Benefits */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl mb-6 tracking-tight">Why Join Our Accelerator?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 tracking-tight">Why Join Our Accelerator?</h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Working side by side with other startup founders will significantly improve your chances to build successful business.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <Card className="border-2 border-yolk-yellow/20 shadow-xl hover:shadow-2xl hover:border-yolk-yellow/40 transition-all duration-300">
               <CardHeader className="pb-4">
                 <div className="w-12 h-12 bg-yolk-yellow rounded-2xl flex items-center justify-center mb-4 shadow-lg">
@@ -320,97 +320,97 @@ export default function App() {
       </section>
 
       {/* Workspace Gallery */}
-      <section className="py-20 bg-gradient-to-br from-yolk-yellow-light/30 to-yolk-teal-light/20">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-yolk-yellow-light/30 to-yolk-teal-light/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl mb-6 tracking-tight">Your Creative Workspace</h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 tracking-tight">Your Creative Workspace</h2>
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
               Experience the energy and collaboration at Yolk Coworking - where AI startups are grown, not born
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <div className="space-y-4">
               <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
                 <ImageWithFallback
-                  src="/images/yolk-workspace/dedicated-desks.webp"
+                  src="./images/yolk-workspace/dedicated-desks.webp"
                   alt="Dedicated desk workspace for focused development"
                   className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-lg font-semibold">Dedicated Development Desks</h3>
-              <p className="text-gray-600">Focus on building your AI startup with dedicated workspace and all the tools you need.</p>
+              <p className="text-gray-600 text-sm md:text-base">Focus on building your AI startup with dedicated workspace and all the tools you need.</p>
             </div>
 
             <div className="space-y-4">
               <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
                 <ImageWithFallback
-                  src="/images/yolk-workspace/collaborative-workspace.webp"
+                  src="./images/yolk-workspace/collaborative-workspace.webp"
                   alt="Collaborative networking and community events"
                   className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-lg font-semibold">Vibrant Community</h3>
-              <p className="text-gray-600">Connect with fellow entrepreneurs, investors, and mentors in our collaborative spaces.</p>
+              <p className="text-gray-600 text-sm md:text-base">Connect with fellow entrepreneurs, investors, and mentors in our collaborative spaces.</p>
             </div>
 
             <div className="space-y-4">
               <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
                 <ImageWithFallback
-                  src="/images/yolk-workspace/meeting-room.webp"
+                  src="./images/yolk-workspace/meeting-room.webp"
                   alt="Professional meeting rooms for pitches and collaboration"
                   className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-lg font-semibold">Professional Meeting Spaces</h3>
-              <p className="text-gray-600">Present your ideas in professional meeting rooms equipped with latest technology.</p>
+              <p className="text-gray-600 text-sm md:text-base">Present your ideas in professional meeting rooms equipped with latest technology.</p>
             </div>
 
             <div className="space-y-4">
               <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
                 <ImageWithFallback
-                  src="/images/yolk-workspace/flexible-cafe-coworking.webp"
+                  src="./images/yolk-workspace/flexible-cafe-coworking.webp"
                   alt="Flexible cafe-style workspace for casual collaboration"
                   className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-lg font-semibold">Flexible Collaboration</h3>
-              <p className="text-gray-600">Work in our cafe-style spaces perfect for brainstorming and casual meetings.</p>
+              <p className="text-gray-600 text-sm md:text-base">Work in our cafe-style spaces perfect for brainstorming and casual meetings.</p>
             </div>
 
             <div className="space-y-4">
               <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
                 <ImageWithFallback
-                  src="/images/yolk-workspace/courtyard-events.webp"
+                  src="./images/yolk-workspace/courtyard-events.webp"
                   alt="Outdoor courtyard events and networking"
                   className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-lg font-semibold">Outdoor Networking</h3>
-              <p className="text-gray-600">Join outdoor events and networking sessions in our beautiful courtyard space.</p>
+              <p className="text-gray-600 text-sm md:text-base">Join outdoor events and networking sessions in our beautiful courtyard space.</p>
             </div>
 
             <div className="space-y-4">
               <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
                 <ImageWithFallback
-                  src="/images/yolk-workspace/yolk-cafe.webp"
+                  src="./images/yolk-workspace/yolk-cafe.webp"
                   alt="Yolk cafe for informal meetings and coffee breaks"
                   className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="text-lg font-semibold">On-site Cafe</h3>
-              <p className="text-gray-600">Fuel your creativity with artisan coffee and connect with other founders in our cafe.</p>
+              <p className="text-gray-600 text-sm md:text-base">Fuel your creativity with artisan coffee and connect with other founders in our cafe.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Application Process */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl mb-6 tracking-tight">Ready to Build the Future of AI?</h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 tracking-tight">Ready to Build the Future of AI?</h2>
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
               Three simple steps to join our exclusive community
             </p>
           </div>
