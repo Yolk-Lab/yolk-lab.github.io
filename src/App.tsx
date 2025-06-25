@@ -161,11 +161,11 @@ export default function App() {
                   Invitation Only • Starting July 2025
                 </Badge>
                 <div className="space-y-4">
-                  <h1 className="text-3xl md:text-5xl lg:text-7xl tracking-tight">
+                  <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight leading-tight">
                     AI Startups
                     <span className="text-yolk-teal block">Grown, Not Born</span>
                   </h1>
-                  <p className="text-lg md:text-xl text-yolk-dark max-w-lg leading-relaxed">
+                  <p className="text-base sm:text-lg md:text-xl text-yolk-dark max-w-lg leading-relaxed">
                     Join an exclusive community of AI startup founders in a premium workspace designed for collaboration, creativity, and rapid growth.
                   </p>
                 </div>
@@ -177,18 +177,18 @@ export default function App() {
                 </Button>
               </div>
 
-              <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-yolk-dark">
+              <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 text-xs sm:text-sm text-yolk-dark">
                 <div className="flex items-center space-x-2">
-                  <Users className="h-4 w-4 text-yolk-darker" />
-                  <span>15 Selected Founders</span>
+                  <Users className="h-4 w-4 text-yolk-darker flex-shrink-0" />
+                  <span className="whitespace-nowrap">15 Selected Founders</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Calendar className="h-4 w-4 text-yolk-darker" />
-                  <span>12-Week Program</span>
+                  <Calendar className="h-4 w-4 text-yolk-darker flex-shrink-0" />
+                  <span className="whitespace-nowrap">12-Week Program</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <MapPin className="h-4 w-4 text-yolk-darker" />
-                  <span>Yolk Coworking</span>
+                  <MapPin className="h-4 w-4 text-yolk-darker flex-shrink-0" />
+                  <span className="whitespace-nowrap">Yolk Coworking</span>
                 </div>
               </div>
             </div>
@@ -218,10 +218,10 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight leading-tight">
                 Grown, Not Born
               </h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
                 We believe great entrepreneurs aren't just born with it—they're cultivated through the right environment, community, and relentless growth. At Yolk AI Hub, we provide the incubator for your startup dreams.
               </p>
               <div className="pt-4">
@@ -253,8 +253,8 @@ export default function App() {
       <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 tracking-tight">Why Join Our Accelerator?</h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 tracking-tight leading-tight">Why Join Our Accelerator?</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Working side by side with other startup founders will significantly improve your chances to build successful business.
             </p>
           </div>
@@ -323,8 +323,8 @@ export default function App() {
       <section className="py-12 md:py-20 bg-gradient-to-br from-yolk-yellow-light/30 to-yolk-teal-light/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 tracking-tight">Your Creative Workspace</h2>
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 tracking-tight leading-tight">Your Creative Workspace</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
               Experience the energy and collaboration at Yolk Coworking - where AI startups are grown, not born
             </p>
           </div>
@@ -393,13 +393,13 @@ export default function App() {
             <div className="space-y-4">
               <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
                 <ImageWithFallback
-                  src="./images/yolk-workspace/yolk-cafe.webp"
-                  alt="Yolk cafe for informal meetings and coffee breaks"
+                  src="./images/yolk-workspace/community-networking.webp"
+                  alt="Community networking and connections at Yolk coworking space"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-lg font-semibold">On-site Cafe</h3>
-              <p className="text-gray-600 text-sm md:text-base">Fuel your creativity with artisan coffee and connect with other founders in our cafe.</p>
+              <h3 className="text-lg font-semibold">Community Networking</h3>
+              <p className="text-gray-600 text-sm md:text-base">Build meaningful connections with fellow entrepreneurs and industry professionals in our vibrant community.</p>
             </div>
           </div>
         </div>
@@ -409,44 +409,44 @@ export default function App() {
       <section className="py-12 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 tracking-tight">Ready to Build the Future of AI?</h2>
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 tracking-tight leading-tight">Ready to Build the Future of AI?</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
               Three simple steps to join our exclusive community
             </p>
           </div>
 
-          <div className="space-y-8">
-            <div className="flex items-start space-x-6 group">
-              <div className="w-16 h-16 bg-yolk-yellow rounded-2xl flex items-center justify-center text-yolk-darker text-xl shadow-xl flex-shrink-0">
+          <div className="space-y-6 sm:space-y-8">
+            <div className="flex items-start space-x-4 sm:space-x-6 group">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-yolk-yellow rounded-2xl flex items-center justify-center text-yolk-darker text-lg sm:text-xl shadow-xl flex-shrink-0">
                 1
               </div>
-              <div className="space-y-2">
-                <h3 className="text-2xl">Apply</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
+              <div className="space-y-2 min-w-0 flex-1">
+                <h3 className="text-xl sm:text-2xl">Apply</h3>
+                <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
                   Submit a one‑page project brief outlining your AI startup vision and goals
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start space-x-6 group">
-              <div className="w-16 h-16 bg-yolk-teal rounded-2xl flex items-center justify-center text-white text-xl shadow-xl flex-shrink-0">
+            <div className="flex items-start space-x-4 sm:space-x-6 group">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-yolk-teal rounded-2xl flex items-center justify-center text-white text-lg sm:text-xl shadow-xl flex-shrink-0">
                 2
               </div>
-              <div className="space-y-2">
-                <h3 className="text-2xl">Interview</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
+              <div className="space-y-2 min-w-0 flex-1">
+                <h3 className="text-xl sm:text-2xl">Interview</h3>
+                <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
                   Quick 15‑minute fit call to ensure mutual alignment and program fit
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start space-x-6 group">
-              <div className="w-16 h-16 bg-yolk-sage rounded-2xl flex items-center justify-center text-white text-xl shadow-xl flex-shrink-0">
+            <div className="flex items-start space-x-4 sm:space-x-6 group">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-yolk-sage rounded-2xl flex items-center justify-center text-white text-lg sm:text-xl shadow-xl flex-shrink-0">
                 3
               </div>
-              <div className="space-y-2">
-                <h3 className="text-2xl">Launch</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
+              <div className="space-y-2 min-w-0 flex-1">
+                <h3 className="text-xl sm:text-2xl">Launch</h3>
+                <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
                   Program begins first week of July 2025 (with possibility to join later)
                 </p>
               </div>
