@@ -143,7 +143,10 @@ export default function App() {
                 <span className="text-xs text-yolk-teal uppercase tracking-wider">Grown, Not Born</span>
               </div>
             </div>
-            <Button className="hidden sm:flex shadow-lg">
+            <Button 
+              className="hidden sm:flex shadow-lg"
+              onClick={() => window.open('https://tally.so/r/3xEkDG', '_blank')}
+            >
               Apply for Cohort
             </Button>
           </div>
@@ -172,7 +175,11 @@ export default function App() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-6">
-                <Button size="lg" className="shadow-xl">
+                <Button 
+                  size="lg" 
+                  className="shadow-xl"
+                  onClick={() => window.open('https://tally.so/r/3xEkDG', '_blank')}
+                >
                   Apply for Cohort <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
@@ -454,7 +461,11 @@ export default function App() {
           </div>
 
           <div className="text-center mt-16">
-            <Button size="lg" className="shadow-2xl text-xl px-10 py-6">
+            <Button 
+              size="lg" 
+              className="shadow-2xl text-xl px-10 py-6"
+              onClick={() => window.open('https://tally.so/r/3xEkDG', '_blank')}
+            >
               Start Your Application <ArrowRight className="ml-3 h-4 w-4" />
             </Button>
           </div>
