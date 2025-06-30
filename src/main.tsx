@@ -10,7 +10,7 @@ posthog.init('phc_FNena2f0FjpBdeFfey1kiALQkkJ2HY3tyNe1ilLicDk', {
   defaults: '2025-05-24',
 })
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <PostHogProvider client={posthog}>
       <App />
