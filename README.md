@@ -1,6 +1,6 @@
-# Yolk AI Hub
+# Yolk Lab
 
-AI Startups Grown, Not Born - Homepage for the Yolk AI accelerator program.
+AI Startups Grown, Not Born - Homepage for the Yolk Lab and AI Challange Program.
 
 ## Development
 
