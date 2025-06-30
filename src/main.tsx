@@ -4,17 +4,15 @@ import App from './App.tsx'
 import './styles/globals.css'
 import { PostHogProvider } from 'posthog-js/react'
 
-const options = {
-  api_host: import.meta.env.VITE_PUBLIC_POSTHOG_HOST,
+posthog.init('phc_FNena2f0FjpBdeFfey1kiALQkkJ2HY3tyNe1ilLicDk', {
+  api_host: 'https://eu.i.posthog.com',
   defaults: '2025-05-24',
-  capture_exceptions: true,
-  debug: import.meta.env.MODE === 'development',
-}
+})
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <PostHogProvider apiKey={import.meta.env.VITE_PUBLIC_POSTHOG_KEY} options={options}>
+    <PostHogProvider client={posthog}>
       <App />
     </PostHogProvider>
   </StrictMode>,
-)
+);
