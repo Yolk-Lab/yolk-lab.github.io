@@ -161,7 +161,7 @@ export default function App() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <Badge variant="secondary" className="w-fit">
-                  Invitation Only • Starting July 2025
+                  Invitation Only • Starting August 2025
                 </Badge>
                 <div className="space-y-4">
                   <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight leading-tight">
@@ -454,7 +454,7 @@ export default function App() {
               <div className="space-y-2 min-w-0 flex-1">
                 <h3 className="text-xl sm:text-2xl">Launch</h3>
                 <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-                  Program begins first week of July 2025 (with possibility to join later)
+                  Program begins first week of August 2025 (with possibility to join later)
                 </p>
               </div>
             </div>
