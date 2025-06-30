@@ -34,11 +34,6 @@ This builds the app for production to the `dist` folder.
 
 The site is automatically deployed to GitHub Pages when changes are pushed to the `main` branch.
 
-To manually deploy:
-```bash
-npm run deploy
-```
-
 ## Project Structure
 
 ```
@@ -61,4 +56,4 @@ src/
 
 ## License
 
-© 2025 Yolk AI Growth Hub. All rights reserved. 
+© 2025 Yolk Lab. All rights reserved. 
