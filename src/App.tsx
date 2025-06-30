@@ -9,6 +9,7 @@ import {
   Egg,
   ExternalLink
 } from "lucide-react";
+import { usePostHog } from 'posthog-js/react';
 
 // Simple Button component
 function Button({ 
@@ -128,6 +129,18 @@ function ImageWithFallback({
 const yolkCommunityImage = "./images/yolk-workspace/community-event-1.jpg";
 
 export default function App() {
+  const posthog = usePostHog();
+  
+  const handleApplyClick = (position: string) => {
+    posthog?.capture('cta_apply', { position });
+    window.open('https://tally.so/r/3xEkDG', '_blank');
+  };
+  
+  const handleStartApplicationClick = () => {
+    posthog?.capture('cta_start_application');
+    window.open('https://tally.so/r/3xEkDG', '_blank');
+  };
+  
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -145,7 +158,7 @@ export default function App() {
             </div>
             <Button 
               className="hidden sm:flex shadow-lg"
-              onClick={() => window.open('https://tally.so/r/3xEkDG', '_blank')}
+              onClick={() => handleApplyClick('menu')}
             >
               Apply for Cohort
             </Button>
@@ -178,7 +191,7 @@ export default function App() {
                 <Button 
                   size="lg" 
                   className="shadow-xl"
-                  onClick={() => window.open('https://tally.so/r/3xEkDG', '_blank')}
+                  onClick={() => handleApplyClick('hero')}
                 >
                   Apply for Cohort <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -464,7 +477,7 @@ export default function App() {
             <Button 
               size="lg" 
               className="shadow-2xl text-xl px-10 py-6"
-              onClick={() => window.open('https://tally.so/r/3xEkDG', '_blank')}
+              onClick={() => handleStartApplicationClick()}
             >
               Start Your Application <ArrowRight className="ml-3 h-4 w-4" />
             </Button>
