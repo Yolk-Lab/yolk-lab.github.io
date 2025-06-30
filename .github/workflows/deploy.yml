@@ -35,6 +35,9 @@ jobs:
       
     - name: Build
       run: npm run build
+      env:
+          VITE_API_URL: ${{ secrets.VITE_PUBLIC_POSTHOG_KEY }}
+          VITE_APP_NAME: ${{ secrets.VITE_PUBLIC_POSTHOG_HOST }}
       
     - name: Add .nojekyll file
       run: touch dist/.nojekyll
