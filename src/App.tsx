@@ -139,7 +139,7 @@ export default function App() {
                 <Egg className="h-6 w-6 text-yolk-darker" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl tracking-tight">Yolk AI Lab</span>
+                <span className="text-xl tracking-tight">Yolk Lab</span>
                 <span className="text-xs text-yolk-teal uppercase tracking-wider">Grown, Not Born</span>
               </div>
             </div>
@@ -165,11 +165,11 @@ export default function App() {
                 </Badge>
                 <div className="space-y-4">
                   <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight leading-tight">
-                    AI Startups
-                    <span className="text-yolk-teal block">Grown, Not Born</span>
+                    AI Challenge
+                    <span className="text-yolk-teal block">Program #1</span>
                   </h1>
                   <p className="text-base sm:text-lg md:text-xl text-yolk-dark max-w-lg leading-relaxed">
-                    Join an exclusive community of AI startup founders in a premium workspace designed for collaboration, creativity, and rapid growth.
+                    The first cohort of Yolk Lab is our AI Challenge accelerator program. We're looking for founders who want to accelerate their growth using AI tools and solutions.
                   </p>
                 </div>
               </div>
@@ -229,7 +229,7 @@ export default function App() {
                 Grown, Not Born
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
-                We believe great entrepreneurs aren't just born with it—they're cultivated through the right environment, community, and relentless growth. At Yolk AI Lab, we provide the incubator for your startup dreams.
+                We believe great entrepreneurs aren't just born with it—they're cultivated through the right environment, community, and relentless growth. At Yolk Lab, we provide the incubator for your startup dreams.
               </p>
               <div className="pt-4">
                 <a 
@@ -481,12 +481,12 @@ export default function App() {
                 <Egg className="h-6 w-6 text-yolk-darker" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl tracking-tight">Yolk AI Lab</span>
+                <span className="text-xl tracking-tight">Yolk Lab</span>
                 <span className="text-xs text-yolk-yellow uppercase tracking-wider">Grown, Not Born</span>
               </div>
             </div>
             <div className="text-gray-400 text-center md:text-right">
-              <div>© 2025 Yolk AI Lab. All rights reserved.</div>
+              <div>© 2025 Yolk Lab. All rights reserved.</div>
               <div className="mt-1">
                 <a 
                   href="https://yolkfolk.pl" 
