@@ -1,6 +1,6 @@
-import React, { useState, useRef } from 'react';
+import { ArrowLeft, Download, Image as ImageIcon, Palette, RefreshCw, Type } from 'lucide-react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Download, ArrowLeft, RefreshCw, Type, Image as ImageIcon, Palette } from 'lucide-react';
 
 // Available background images
 const backgroundImages = [
@@ -109,14 +109,14 @@ export default function SocialCreatives() {
     // Load and draw blurred background
     const img = new Image();
     img.crossOrigin = 'anonymous';
-    
+
     img.onload = async () => {
       // Calculate scaling to maintain aspect ratio (like object-fit: cover)
       const imgAspect = img.width / img.height;
       const canvasAspect = canvas.width / canvas.height;
-      
+
       let drawWidth, drawHeight, drawX, drawY;
-      
+
       if (imgAspect > canvasAspect) {
         // Image is wider than canvas - fit to height, center horizontally
         drawHeight = canvas.height;
@@ -130,44 +130,44 @@ export default function SocialCreatives() {
         drawX = 0;
         drawY = (canvas.height - drawHeight) / 2;
       }
-      
+
       // Draw background image with proper aspect ratio
       ctx.drawImage(img, drawX, drawY, drawWidth, drawHeight);
-      
+
       // Apply blur effect
       ctx.filter = `blur(${config.blurIntensity}px)`;
       ctx.drawImage(canvas, 0, 0);
       ctx.filter = 'none';
-      
+
       // Add dark overlay for text readability
       ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      
+
       // Calculate positions
       const topMargin = canvas.height * 0.15;
       const logoY = topMargin + (canvas.height * 0.03); // Position logo much higher
-      
+
       // Draw logo first
       await drawLogo(ctx, canvas.width, canvas.height, logoY);
-      
+
       // Draw text content after logo
       drawText(ctx, canvas.width, canvas.height);
     };
-    
+
     img.src = config.backgroundImage;
   };
 
   const drawLogo = async (ctx: CanvasRenderingContext2D, width: number, height: number, logoY: number) => {
     const logoSize = Math.min(width, height) * 0.08;
-    
+
     // Position logo centered horizontally, at the specified Y position
     const x = (width - logoSize) / 2;
     const y = logoY;
-    
+
     // Load and draw the actual logo PNG
     const logoImg = new Image();
     logoImg.crossOrigin = 'anonymous';
-    
+
     return new Promise<void>((resolve) => {
       logoImg.onload = () => {
         // Add subtle shadow for better visibility
@@ -175,15 +175,15 @@ export default function SocialCreatives() {
         ctx.shadowBlur = 8;
         ctx.shadowOffsetX = 2;
         ctx.shadowOffsetY = 2;
-        
+
         ctx.drawImage(logoImg, x, y, logoSize, logoSize);
-        
+
         // Reset shadow
         ctx.shadowColor = 'transparent';
         ctx.shadowBlur = 0;
         ctx.shadowOffsetX = 0;
         ctx.shadowOffsetY = 0;
-        
+
         resolve();
       };
       logoImg.src = './logo.png';
@@ -192,20 +192,20 @@ export default function SocialCreatives() {
 
   const drawText = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
     const centerX = width / 2;
-    
+
     // Make all text sizes responsive to canvas size
     const scale = Math.min(width, height) / 1080;
-    
+
     // Use the same calculations as in generateCreative for consistency
     const topMargin = height * 0.15;
     const logoSize = Math.min(width, height) * 0.08;
     const logoY = topMargin + (height * 0.03); // Same as in generateCreative
     const logoBottomY = logoY + logoSize;
     const logoMargin = height * 0.08; // Bigger gap between logo and title
-    
+
     // Title starts after logo with margin
     const titleY = logoBottomY + logoMargin;
-    
+
     // Title
     const titleFont = titleSizes[config.titleSize];
     const responsiveTitleSize = titleFont.size * scale;
@@ -213,46 +213,46 @@ export default function SocialCreatives() {
     ctx.fillStyle = config.titleColor;
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    
+
     const titleHeight = drawMultilineText(ctx, config.title, centerX, titleY, width * 0.9, responsiveTitleSize * titleFont.lineHeight);
-    
+
     // Subtitle - position after title with smaller spacing
     const subtitleSize = Math.max(52 * scale, 42);
     ctx.font = `600 ${subtitleSize}px Arial`;
     ctx.fillStyle = config.subtitleColor;
     const subtitleY = titleY + titleHeight + (height * 0.04);
     ctx.fillText(config.subtitle, centerX, subtitleY);
-    
+
     // Description - position after subtitle with bigger spacing
     const descriptionSize = Math.max(42 * scale, 36);
     ctx.font = `400 ${descriptionSize}px Arial`;
     ctx.fillStyle = config.descriptionColor;
     const descriptionY = subtitleY + (height * 0.06); // Increased spacing
     ctx.fillText(config.description, centerX, descriptionY);
-    
+
     // CTA Button - position after description with smaller spacing
     const ctaY = descriptionY + (height * 0.08);
     const ctaWidth = Math.max(width * 0.35, 400);
     const ctaHeight = Math.max(height * 0.08, 80);
     const ctaX = centerX - ctaWidth / 2;
-    
+
     // Button shadow for depth
     ctx.shadowColor = 'rgba(0, 0, 0, 0.3)';
     ctx.shadowBlur = 8;
     ctx.shadowOffsetX = 0;
     ctx.shadowOffsetY = 4;
-    
+
     // Button background
     ctx.fillStyle = config.ctaBgColor;
-    ctx.roundRect(ctaX, ctaY - ctaHeight/2, ctaWidth, ctaHeight, 16);
+    ctx.roundRect(ctaX, ctaY - ctaHeight / 2, ctaWidth, ctaHeight, 16);
     ctx.fill();
-    
+
     // Reset shadow
     ctx.shadowColor = 'transparent';
     ctx.shadowBlur = 0;
     ctx.shadowOffsetX = 0;
     ctx.shadowOffsetY = 0;
-    
+
     // Button text - make it bigger
     const ctaTextSize = Math.max(32 * scale, 28);
     ctx.font = `600 ${ctaTextSize}px Arial`;
@@ -265,12 +265,12 @@ export default function SocialCreatives() {
     let line = '';
     let currentY = y;
     let lineCount = 0;
-    
+
     for (let n = 0; n < words.length; n++) {
       const testLine = line + words[n] + ' ';
       const metrics = ctx.measureText(testLine);
       const testWidth = metrics.width;
-      
+
       if (testWidth > maxWidth && n > 0) {
         ctx.fillText(line, x, currentY);
         line = words[n] + ' ';
@@ -282,7 +282,7 @@ export default function SocialCreatives() {
     }
     ctx.fillText(line, x, currentY);
     lineCount++;
-    
+
     // Return the total height of the text block
     return lineCount * lineHeight;
   };
@@ -290,7 +290,7 @@ export default function SocialCreatives() {
   const downloadCreative = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    
+
     const link = document.createElement('a');
     link.download = `yolk-lab-creative-${config.format}-${Date.now()}.png`;
     link.href = canvas.toDataURL();
@@ -310,7 +310,7 @@ export default function SocialCreatives() {
   // Generate creative when config changes
   React.useEffect(() => {
     generateCreative();
-  }, [config]);
+  }, [config, generateCreative]);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -349,7 +349,7 @@ export default function SocialCreatives() {
                 <ImageIcon className="h-5 w-5 mr-2" />
                 Format & Background
               </h3>
-              
+
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Format</label>
@@ -363,7 +363,7 @@ export default function SocialCreatives() {
                     <option value="landscape">LinkedIn Post (1200x630)</option>
                   </select>
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Background Image</label>
                   <div className="grid grid-cols-3 gap-2">
@@ -371,16 +371,15 @@ export default function SocialCreatives() {
                       <button
                         key={img.id}
                         onClick={() => setConfig(prev => ({ ...prev, backgroundImage: img.src }))}
-                        className={`relative aspect-square rounded-lg overflow-hidden border-2 transition-colors ${
-                          config.backgroundImage === img.src ? 'border-yolk-teal' : 'border-gray-200 hover:border-gray-300'
-                        }`}
+                        className={`relative aspect-square rounded-lg overflow-hidden border-2 transition-colors ${config.backgroundImage === img.src ? 'border-yolk-teal' : 'border-gray-200 hover:border-gray-300'
+                          }`}
                       >
                         <img src={img.src} alt={img.name} className="w-full h-full object-cover" />
                       </button>
                     ))}
                   </div>
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Blur Intensity: {config.blurIntensity}px
@@ -403,7 +402,7 @@ export default function SocialCreatives() {
                 <Type className="h-5 w-5 mr-2" />
                 Text Templates
               </h3>
-              
+
               <div className="grid grid-cols-2 gap-2 mb-4">
                 {textTemplates.map((template) => (
                   <button
@@ -416,7 +415,7 @@ export default function SocialCreatives() {
                   </button>
                 ))}
               </div>
-              
+
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Title</label>
@@ -427,7 +426,7 @@ export default function SocialCreatives() {
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yolk-teal"
                   />
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Subtitle</label>
                   <input
@@ -437,7 +436,7 @@ export default function SocialCreatives() {
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yolk-teal"
                   />
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
                   <input
@@ -447,7 +446,7 @@ export default function SocialCreatives() {
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yolk-teal"
                   />
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Call to Action</label>
                   <input
@@ -466,7 +465,7 @@ export default function SocialCreatives() {
                 <Palette className="h-5 w-5 mr-2" />
                 Styling Options
               </h3>
-              
+
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Title Size</label>
@@ -481,7 +480,7 @@ export default function SocialCreatives() {
                     <option value="xl">Extra Large</option>
                   </select>
                 </div>
-                
+
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Title Color</label>
@@ -492,7 +491,7 @@ export default function SocialCreatives() {
                       className="w-full h-10 rounded-md border border-gray-300"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Subtitle Color</label>
                     <input
@@ -503,7 +502,7 @@ export default function SocialCreatives() {
                     />
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">CTA Text Color</label>
@@ -514,7 +513,7 @@ export default function SocialCreatives() {
                       className="w-full h-10 rounded-md border border-gray-300"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">CTA Background</label>
                     <input
@@ -532,7 +531,7 @@ export default function SocialCreatives() {
           {/* Preview Panel */}
           <div className="bg-white rounded-lg shadow-sm p-6">
             <h3 className="text-lg font-semibold mb-4">Preview</h3>
-            
+
             <div className="flex justify-center">
               <div className="relative">
                 <canvas
@@ -545,7 +544,7 @@ export default function SocialCreatives() {
                 />
               </div>
             </div>
-            
+
             <div className="mt-4 text-center">
               <button
                 onClick={generateCreative}
