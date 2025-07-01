@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Yolk Lab</title>
+    <script type="text/javascript">
+        // Redirect to home and let React Router handle the routing
+        var currentPath = window.location.pathname;
+        var searchParams = window.location.search;
+        var hash = window.location.hash;
+
+        // Store the intended path for React Router to handle
+        sessionStorage.setItem('redirectPath', currentPath + searchParams + hash);
+
+        // Redirect to the home page
+        window.location.replace('/');
+    </script>
+</head>
+
+<body>
+    <div>Redirecting...</div>
+</body>
+
+</html>
