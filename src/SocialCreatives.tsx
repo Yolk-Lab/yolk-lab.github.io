@@ -145,7 +145,6 @@ export default function SocialCreatives() {
       
       // Calculate positions
       const topMargin = canvas.height * 0.15;
-      const logoSize = Math.min(canvas.width, canvas.height) * 0.08;
       const logoY = topMargin + (canvas.height * 0.03); // Position logo much higher
       
       // Draw logo first
@@ -265,7 +264,6 @@ export default function SocialCreatives() {
     const words = text.split(' ');
     let line = '';
     let currentY = y;
-    const startY = y;
     let lineCount = 0;
     
     for (let n = 0; n < words.length; n++) {
