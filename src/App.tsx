@@ -10,6 +10,7 @@ import {
   ExternalLink
 } from "lucide-react";
 import { usePostHog } from 'posthog-js/react';
+import { Link } from 'react-router-dom';
 
 // Simple Button component
 function Button({ 
@@ -156,12 +157,19 @@ export default function App() {
                 <span className="text-xs text-yolk-teal uppercase tracking-wider">Grown, Not Born</span>
               </div>
             </div>
-            <Button 
-              className="hidden sm:flex shadow-lg"
-              onClick={() => handleApplyClick('menu')}
-            >
-              Apply for Cohort
-            </Button>
+            <div className="flex items-center space-x-4">
+              <Link to="/info" className="hidden sm:block">
+                <Button variant="secondary" className="shadow-lg">
+                  More Info
+                </Button>
+              </Link>
+              <Button 
+                className="hidden sm:flex shadow-lg"
+                onClick={() => handleApplyClick('menu')}
+              >
+                Apply for Cohort
+              </Button>
+            </div>
           </div>
         </div>
       </nav>
@@ -264,6 +272,54 @@ export default function App() {
                   className="w-full h-full object-cover rounded-2xl drop-shadow-2xl"
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Email Subscription */}
+      <section className="py-12 md:py-16 bg-gradient-to-br from-yolk-yellow-light/30 to-yolk-teal-light/20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border-2 border-yolk-yellow/20">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl mb-4 tracking-tight leading-tight text-yolk-darker">
+                Stay Connected
+              </h2>
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+                Join our community and get updates on events, workshops, and startup resources. We organize regular events for our community—don't miss anything!
+              </p>
+            </div>
+            
+            <div className="flex justify-center">
+              <form 
+                action="https://app.kit.com/forms/8254653/subscriptions" 
+                className="w-full max-w-md"
+                method="post" 
+                data-sv-form="8254653" 
+                data-uid="e80ac3fd47" 
+                data-format="inline" 
+                data-version="5"
+              >
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <input
+                    className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-yolk-teal focus:outline-none transition-colors text-gray-900 placeholder-gray-500"
+                    name="email_address"
+                    aria-label="Email Address"
+                    placeholder="Enter your email"
+                    required
+                    type="email"
+                  />
+                  <Button 
+                    type="submit"
+                    className="bg-yolk-teal hover:bg-yolk-teal-dark text-white px-8 py-3 shadow-lg whitespace-nowrap"
+                  >
+                    Subscribe
+                  </Button>
+                </div>
+                <p className="text-xs text-gray-500 mt-4 text-center">
+                  We won't send you spam. Unsubscribe at any time.
+                </p>
+              </form>
             </div>
           </div>
         </div>
