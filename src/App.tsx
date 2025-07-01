@@ -157,17 +157,17 @@ export default function App() {
                 <span className="text-xs text-yolk-teal uppercase tracking-wider">Grown, Not Born</span>
               </div>
             </div>
-            <div className="flex items-center space-x-4">
-              <Link to="/info" className="hidden sm:block">
-                <Button variant="secondary" className="shadow-lg">
+            <div className="flex items-center space-x-2 sm:space-x-4">
+              <Link to="/info">
+                <Button variant="secondary" className="shadow-lg text-xs sm:text-sm px-2 sm:px-4">
                   More Info
                 </Button>
               </Link>
               <Button 
-                className="hidden sm:flex shadow-lg"
+                className="shadow-lg text-xs sm:text-sm px-2 sm:px-4"
                 onClick={() => handleApplyClick('menu')}
               >
-                Apply for Cohort
+                Apply
               </Button>
             </div>
           </div>
