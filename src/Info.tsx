@@ -10,9 +10,7 @@ export default function Info() {
             Our Mission
           </h1>
           <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto text-gray-200 leading-relaxed">
-            We're building a community-powered accelerator where ambitious founders use
-            Artificial Intelligence to solve real problems, together. Here's what that
-            means for you.
+            We're building a founder-first workspace where ambitious entrepreneurs build side-by-side, share honest feedback, and celebrate weekly wins. Here's what that means for you.
           </p>
           <Link
             to="/"
@@ -28,31 +26,26 @@ export default function Info() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <h2 className="text-2xl sm:text-3xl font-semibold text-yolk-darker">Why We Exist</h2>
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-            The AI landscape is evolving at break-neck speed. Building a company in
-            isolation can feel overwhelming and slow. At Yolk Lab we believe that
+            Building a company in isolation can be overwhelming and slow. At Yolk Lab we believe that
             <span className="font-semibold"> great entrepreneurs are grown, not born.</span>
-            By surrounding driven founders with the right environment, resources and
-            relentless support, we compress twelve months of progress into twelve
-            intense weeks.
+            By surrounding driven founders with the right environment, shared workspace, and relentless support, we turn months of struggling alone into weeks of focused progress.
           </p>
 
-          <h2 className="text-2xl sm:text-3xl font-semibold text-yolk-darker">How the Program Works</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold text-yolk-darker">How It Works</h2>
           <ul className="list-disc pl-6 space-y-3 text-gray-700 text-base sm:text-lg leading-relaxed">
             <li>
-              <span className="font-medium">Curated Cohort —</span> 10-15 founders selected for
-              passion, commitment and culture fit.
+              <span className="font-medium">Curated Community —</span> 15 founders selected for
+              drive, commitment, and culture fit.
             </li>
             <li>
-              <span className="font-medium">12-Week Sprint —</span> Hybrid mastermind &amp; accelerator
-              with mandatory on-site Mondays and Fridays.
+              <span className="font-medium">Weekly Rhythm —</span> Monday planning, Friday demo days, and continuous collaboration in-between.
             </li>
             <li>
-              <span className="font-medium">Weekly Hot Seats &amp; Accountability —</span> Focused
+              <span className="font-medium">Hot Seats &amp; Accountability —</span> Focused
               feedback and rotating partnerships to keep momentum high.
             </li>
             <li>
-              <span className="font-medium">Expert Sessions &amp; Public Demos —</span> Three lunch-time
-              workshops per week and a larger community event each month.
+              <span className="font-medium">Expert Sessions &amp; Public Demos —</span> Lunch-and-learn workshops and open demo nights that attract the wider tech community.
             </li>
             <li>
               <span className="font-medium">Premium Workspace —</span> Dedicated desks, whiteboard
@@ -76,8 +69,8 @@ export default function Info() {
 
           <h2 className="text-2xl sm:text-3xl font-semibold text-yolk-darker">Who Should Apply</h2>
           <ul className="list-disc pl-6 space-y-3 text-gray-700 text-base sm:text-lg leading-relaxed">
-            <li>Founders building AI-powered products or using AI to scale impact.</li>
-            <li>Early-stage teams or solo builders with an MVP up to early revenue.</li>
+            <li>Founders building high-growth products in any industry.</li>
+            <li>Early-stage teams or solo builders with a prototype up to early revenue.</li>
             <li>People who thrive in a collaborative, give-first environment.</li>
           </ul>
 

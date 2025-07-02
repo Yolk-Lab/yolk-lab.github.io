@@ -1,24 +1,24 @@
-import { 
-  Users, 
-  Target, 
-  Zap, 
-  Eye, 
-  Calendar,
-  MapPin,
+import {
   ArrowRight,
+  Calendar,
   Egg,
-  ExternalLink
+  ExternalLink,
+  Eye,
+  MapPin,
+  Target,
+  Users,
+  Zap
 } from "lucide-react";
 import { usePostHog } from 'posthog-js/react';
 import { Link } from 'react-router-dom';
 
 // Simple Button component
-function Button({ 
-  children, 
-  className = "", 
+function Button({
+  children,
+  className = "",
   size = "default",
   variant = "default",
-  ...props 
+  ...props
 }: {
   children: React.ReactNode;
   className?: string;
@@ -26,18 +26,18 @@ function Button({
   variant?: "default" | "secondary";
 } & React.ButtonHTMLAttributes<HTMLButtonElement>) {
   const baseClasses = "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
-  
+
   const variantClasses = {
     default: "bg-yolk-darker text-white hover:bg-yolk-dark",
     secondary: "bg-yolk-yellow/20 text-yolk-darker border border-yolk-yellow/30",
   };
-  
+
   const sizeClasses = {
     default: "h-10 px-4 py-2",
     sm: "h-9 px-3",
     lg: "h-11 px-8",
   };
-  
+
   return (
     <button
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
@@ -90,11 +90,11 @@ function CardContent({ children, className = "", ...props }: { children: React.R
 }
 
 // Simple Badge component
-function Badge({ 
-  children, 
-  className = "", 
+function Badge({
+  children,
+  className = "",
   variant = "default",
-  ...props 
+  ...props
 }: {
   children: React.ReactNode;
   className?: string;
@@ -104,7 +104,7 @@ function Badge({
     default: "bg-yolk-darker text-white",
     secondary: "bg-yolk-yellow/20 text-yolk-darker border border-yolk-yellow/30",
   };
-  
+
   return (
     <div className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${variantClasses[variant]} ${className}`} {...props}>
       {children}
@@ -113,11 +113,11 @@ function Badge({
 }
 
 // Simple ImageWithFallback component
-function ImageWithFallback({ 
-  src, 
-  alt, 
+function ImageWithFallback({
+  src,
+  alt,
   className = "",
-  ...props 
+  ...props
 }: {
   src: string;
   alt: string;
@@ -131,17 +131,17 @@ const yolkCommunityImage = "./images/yolk-workspace/community-event-1.jpg";
 
 export default function App() {
   const posthog = usePostHog();
-  
+
   const handleApplyClick = (position: string) => {
     posthog?.capture('cta_apply', { position });
     window.open('https://tally.so/r/3xEkDG', '_blank');
   };
-  
+
   const handleStartApplicationClick = () => {
     posthog?.capture('cta_start_application');
     window.open('https://tally.so/r/3xEkDG', '_blank');
   };
-  
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -163,7 +163,7 @@ export default function App() {
                   More Info
                 </Button>
               </Link>
-              <Button 
+              <Button
                 className="shadow-lg text-xs sm:text-sm px-2 sm:px-4"
                 onClick={() => handleApplyClick('menu')}
               >
@@ -186,22 +186,22 @@ export default function App() {
                 </Badge>
                 <div className="space-y-4">
                   <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight leading-tight">
-                    AI Challenge
-                    <span className="text-yolk-teal block">Program #1</span>
+                    Workspace for Startup Founders
+                    <span className="text-yolk-teal block">Weekly Demos &amp; Masterminds</span>
                   </h1>
                   <p className="text-base sm:text-lg md:text-xl text-yolk-dark max-w-lg leading-relaxed">
-                    The first cohort of Yolk Lab is our AI Challenge accelerator program. We're looking for founders who want to accelerate their growth using AI tools and solutions.
+                    Join a focused community of founders building side&nbsp;by&nbsp;side. Share a workspace, ship every week, and get honest feedback during open demos and mastermind sessions.
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-6">
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="shadow-xl"
                   onClick={() => handleApplyClick('hero')}
                 >
-                  Apply for Cohort <ArrowRight className="ml-2 h-4 w-4" />
+                  Apply to Join <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
 
@@ -212,7 +212,7 @@ export default function App() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Calendar className="h-4 w-4 text-yolk-darker flex-shrink-0" />
-                  <span className="whitespace-nowrap">12-Week Program</span>
+                  <span className="whitespace-nowrap">Weekly Demos &amp; Masterminds</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="h-4 w-4 text-yolk-darker flex-shrink-0" />
@@ -253,9 +253,9 @@ export default function App() {
                 We believe great entrepreneurs aren't just born with it—they're cultivated through the right environment, community, and relentless growth. At Yolk Lab, we provide the incubator for your startup dreams.
               </p>
               <div className="pt-4">
-                <a 
-                  href="https://yolkfolk.pl" 
-                  target="_blank" 
+                <a
+                  href="https://yolkfolk.pl"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-yolk-yellow hover:text-yolk-yellow-light transition-colors"
                 >
@@ -266,8 +266,8 @@ export default function App() {
             </div>
             <div className="flex justify-center lg:justify-end">
               <div className="w-64 h-64 md:w-80 md:h-80 relative">
-                <img 
-                  src={yolkCommunityImage} 
+                <img
+                  src={yolkCommunityImage}
                   alt="Yolk community events where entrepreneurs are grown, not born"
                   className="w-full h-full object-cover rounded-2xl drop-shadow-2xl"
                 />
@@ -289,15 +289,15 @@ export default function App() {
                 Join our community and get updates on events, workshops, and startup resources. We organize regular events for our community—don't miss anything!
               </p>
             </div>
-            
+
             <div className="flex justify-center">
-              <form 
-                action="https://app.kit.com/forms/8254653/subscriptions" 
+              <form
+                action="https://app.kit.com/forms/8254653/subscriptions"
                 className="w-full max-w-md"
-                method="post" 
-                data-sv-form="8254653" 
-                data-uid="e80ac3fd47" 
-                data-format="inline" 
+                method="post"
+                data-sv-form="8254653"
+                data-uid="e80ac3fd47"
+                data-format="inline"
                 data-version="5"
               >
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -309,7 +309,7 @@ export default function App() {
                     required
                     type="email"
                   />
-                  <Button 
+                  <Button
                     type="submit"
                     className="bg-yolk-teal hover:bg-yolk-teal-dark text-white px-8 py-3 shadow-lg whitespace-nowrap"
                   >
@@ -329,7 +329,7 @@ export default function App() {
       <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 tracking-tight leading-tight">Why Join Our Accelerator?</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 tracking-tight leading-tight">Why Work at Yolk Lab?</h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Working side by side with other startup founders will significantly improve your chances to build successful business.
             </p>
@@ -530,8 +530,8 @@ export default function App() {
           </div>
 
           <div className="text-center mt-16">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="shadow-2xl text-xl px-10 py-6"
               onClick={() => handleStartApplicationClick()}
             >
@@ -557,9 +557,9 @@ export default function App() {
             <div className="text-gray-400 text-center md:text-right">
               <div>© 2025 Yolk Lab. All rights reserved.</div>
               <div className="mt-1">
-                <a 
-                  href="https://yolkfolk.pl" 
-                  target="_blank" 
+                <a
+                  href="https://yolkfolk.pl"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-yolk-yellow hover:text-yolk-yellow-light underline"
                 >
